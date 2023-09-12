@@ -20,7 +20,7 @@ const ProductTableContainer: React.FC = () => {
     useEffect(() => {
         const loadProducts = async () => {
             try {
-                const response: ApiResponse = await fetchProducts(currentPage, pageSize, sortColumn, sortDirection, filterQuery);;
+                const response: ApiResponse = await fetchProducts(currentPage, pageSize, sortColumn, sortDirection, inputValueDebounce);;
                 setProducts(response.data);
                 setTotal(response.pagination.total_count);
             } catch (error) {

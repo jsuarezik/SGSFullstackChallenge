@@ -157,7 +157,7 @@ const ProductTable: React.FC<ProductTableProps> = ({ products, handleSort, sortC
                                 <TableCell>
                                     <Checkbox checked={product.isActive} readOnly />
                                 </TableCell>
-                                <TableCell><a href={product.picture} target='_blank'> <img src={product.picture} alt={product.name} width={50} /></a></TableCell>
+                                <TableCell><a href={product.picture} target='_blank' rel='noreferrer'> <img src={product.picture} alt={product.name} width={50} /></a></TableCell>
                                 <TableCell>
                                     <Checkbox checked={product.discount.status} readOnly />
                                 </TableCell>
